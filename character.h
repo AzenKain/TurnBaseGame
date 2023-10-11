@@ -1,5 +1,5 @@
 #ifdef CHARACTER_H
-#define CHARACTER.H
+#define CHARACTER_H
 class character{
     private:
         int id;
@@ -25,6 +25,56 @@ class character{
             this->exp = exp;   
             this->level = level;
         }
+
+        void setID(int id){
+            this->id = id;
+        }
+        int getID(){
+            return this->id;
+        }
+        void setName(string name){
+            this->name = name;
+        }
+        string getName(){
+            return this->name;
+        }
+         
+        void setHp(float hp){
+            this->hp = hp;
+        }
+        float getHp(){
+            return this->hp;
+        }
+        void setDamage(float damage){
+            this->damage = damage;
+        }
+        float getDamage(){
+            return this->damage;
+        }
+        void setExp(float exp){
+            this->exp = exp;
+        }
+        float getExp(){
+            return this->exp;
+        }
+        void setLevel(int level){
+            this->level = level;
+        }
+        int getLevel(){
+            return this->level;
+        }
+
+
+        void gainExp(float experience){
+            this->exp += experience;
+            this->LevelUp();
+        }
+        void LevelUp(){
+            
+            }
+        }
+
+
 
 };
 #endif;
