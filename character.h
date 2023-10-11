@@ -70,8 +70,22 @@ class character{
             this->LevelUp();
         }
         void LevelUp(){
-            
+            while(trunc(this->exp / (100 + this->level * 15) != 0)){
+                this->level++;
+                this->exp -= (100 + this->level * 15);
+                this->hp *= 1.05;
+                this->damage *= 1.05;
             }
+            else return;
+        }
+            
+        virtual string PrintInfo() {
+            string ans = "" + to_string(this->id) + " - "
+            + this->name + " - " 
+            + to_string(this->hp) + " - "
+            + to_string(this->damage) + " - "
+            + to_string(this->exp) + ".";
+            return ans;
         }
 
 
